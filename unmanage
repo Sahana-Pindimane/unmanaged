@@ -1,0 +1,28 @@
+
+git clone https://github.com/sreepathysois/phpmysql-app.git
+cd online-shopping-system/
+sudo cp -rf * /var/www/html/
+cd /var/www/html/
+cd database/
+ls
+sudo mysql -u root -p
+create database mywebdb;
+use mysebdb;
+source onlineshop.sql;
+create user 'msis'@'localhost' identified by 'Msis@123';
+grant all privileges on mywebdb.* to 'msis'@'localhost';
+exit;
+sudo mysql -u msis -p
+enter password
+ show databases;
+ use mywebdb;
+ show tables;
+ exit;
+ cd ..
+ vi db.php
+ --localhost
+ ---
+ ---
+ ---
+ vi /etc/apache2/mods-enabled/dir.conf
+ sudo systemctl restart apache2
